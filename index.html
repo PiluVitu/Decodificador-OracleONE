@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/Logo Pessoal.svg"
+      type="image/x-icon"
+    />
+    <title>Decodificador Alura</title>
+    <script src="./assets/js/index.js" defer type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./assets/images/alura-logo.svg" alt="Logo Alura" />
+      </header>
+      <main>
+        <label for="text" class="sr-only"
+          >Campo de texto para inserir a mensagem a ser encriptada</label
+        >
+        <textarea
+          id="text"
+          type="text"
+          placeholder="Digite seu Texto"
+        ></textarea>
+        <div>
+          <img
+            src="./assets/images/exclamation.svg"
+            alt="Simbolo de exclamação"
+          />
+          <small>Apenas letras minúsculas e sem acento.</small>
+        </div>
+        <div class="buttons">
+          <button id="crypt">Criptografar</button>
+          <button id="decrypt">Descriptografar</button>
+        </div>
+      </main>
+      <section>
+        <div class="default">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p>
+            Digite a mensagem que voce deseja criptografar ou descriptografar
+          </p>
+        </div>
+        <div class="alt hidden">
+          <p></p>
+          <button id="copy">Copiar</button>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>

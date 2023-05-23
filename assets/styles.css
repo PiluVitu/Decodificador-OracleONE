@@ -1,0 +1,225 @@
+:root {
+  font-size: 62.5%;
+
+  --dBlue-100: #609ed4;
+  --dBlue-200: #356ea9;
+  --dBlue-300: #0a3871;
+  --dBlue-400-a: #072b61;
+  --dBlue-400-b: #052051;
+
+  --lBlue-100: #f3f5fc;
+  --lBlue-200: #eff1fa;
+  --lBlue-300: #e9ecf8;
+  --lBlue-400: #aab2d5;
+  --lBlue-500: #757fb2;
+
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+
+  background-color: var(--lBlue-100);
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: var(--lBlue-300);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--dBlue-200);
+  border-radius: 100rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+section div.hidden {
+  display: none;
+}
+
+#app {
+  max-width: 37rem;
+  height: 100%;
+  padding-inline: 1.6rem;
+  padding-bottom: 3.5rem;
+
+  margin-inline: auto;
+
+}
+
+header {
+  padding: 2.4rem 0 2.4rem;
+
+  margin-bottom: 5.6rem;
+}
+
+main textarea {
+  resize: unset;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 29.6rem;
+  padding: 1rem;
+  margin-bottom: 6.4rem;
+
+  color: var(--dBlue-300);
+
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 150%;
+}
+
+main textarea:focus {
+  color: var(--dBlue-300);
+}
+main textarea::placeholder {
+  color: var(--dBlue-300);
+}
+main textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+main textarea::-webkit-scrollbar-track {
+  background: var(--lBlue-300);
+}
+main textarea::-webkit-scrollbar-thumb {
+  background: var(--dBlue-200);
+  border-radius: 100rem;
+}
+main div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+main div img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+main div small {
+  color: var(--gray-500);
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  margin-top: 1.6rem;
+}
+.buttons button,
+#copy {
+  width: 100%;
+  padding: 2.4rem;
+
+  border: 1px solid var(--dBlue-300);
+
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+
+  transition: all 0.3s;
+}
+
+.buttons button:nth-child(1),
+.buttons button:nth-child(2):hover,
+#copy:hover {
+  color: white;
+  background-color: var(--dBlue-300);
+}
+
+.buttons button:nth-child(1):hover,
+.buttons button:nth-child(2) {
+  color: var(--dBlue-300);
+  background-color: var(--lBlue-300);
+}
+
+section {
+  margin-top: 6.4rem;
+
+  background: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 3.2rem;
+
+  width: 100%;
+  margin-inline: auto;
+
+  padding: 3.2rem;
+}
+.default {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.default h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 120%;
+
+  color: var(--gray-500);
+}
+.default p {
+  text-align: center;
+  color: var(--gray-400);
+}
+
+.alt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+.alt p {
+  max-height: 43.2rem;
+  padding-top: 1rem;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  overflow: auto;
+}
+.alt p::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.alt p::-webkit-scrollbar-track {
+  background: var(--lBlue-300);
+}
+.alt p::-webkit-scrollbar-thumb {
+  background: var(--dBlue-200);
+  border-radius: 100rem;
+}
