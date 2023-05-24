@@ -56,7 +56,8 @@ body::-webkit-scrollbar-thumb {
   border-width: 0;
 }
 
-section div.hidden {
+section div.hidden,
+.default img {
   display: none;
 }
 
@@ -67,7 +68,6 @@ section div.hidden {
   padding-bottom: 3.5rem;
 
   margin-inline: auto;
-
 }
 
 header {
@@ -208,6 +208,8 @@ section {
   max-height: 43.2rem;
   padding-top: 1rem;
 
+  text-align: left;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
@@ -222,4 +224,99 @@ section {
 .alt p::-webkit-scrollbar-thumb {
   background: var(--dBlue-200);
   border-radius: 100rem;
+}
+
+footer {
+  text-align: center;
+}
+footer small {
+  font-size: 1.4rem;
+  line-height: 150%;
+  text-align: center;
+}
+footer a {
+  color: var(--dBlue-300);
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: var(--dBlue-200);
+}
+
+@media (min-width: 426px) {
+  #app {
+    max-width: 76.8rem;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 770px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #app {
+    height: 97vh;
+    max-width: 98%;
+    display: flex;
+    gap: 8rem;
+    margin-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    left: 2.4rem;
+    top: 2rem;
+    margin: initial;
+    padding: initial;
+  }
+  main {
+    height: 100%;
+    width: 68rem;
+    margin-left: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main textarea {
+    margin-block: 7.2rem 3rem;
+    height: 60rem;
+  }
+  main div {
+    width: 100%;
+  }
+  section {
+    max-width: 42rem;
+
+    margin: 4rem 4rem 4rem 0;
+
+    display: flex;
+    align-items: center;
+  }
+  .default h2 {
+    font-size: 24px;
+  }
+  .default img {
+    display: initial;
+  }
+  .alt {
+    height: 100%;
+    width: 100%;
+    gap: 3.2rem;
+  }
+  .alt p {
+    max-height: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    left: 4.4rem;
+    top: 4rem;
+  }
 }
