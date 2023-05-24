@@ -10,6 +10,7 @@ export default class CryptHandler {
   criptografar() {
 
     if(!input.value) {
+      appHandler.removeDivClass()
       return alert('Insira um texto para criptografar')
     }
     if(!output.innerHTML) {
@@ -37,13 +38,6 @@ export default class CryptHandler {
   }
   
   descriptografar(){
-    if(!input.value) {
-      return alert('Insira um texto para descriptografar')
-    }
-    if(!output.innerHTML) {
-      appHandler.toggleDivClass()
-    }
-  
     const arrayEncryptWords = input.value.split(' ')
     const decryptArray = []
   
@@ -73,6 +67,23 @@ export default class CryptHandler {
       
       decryptArray.push(decryptWord)
     })
-    output.innerHTML = decryptArray.join(' ')
+
+    const decryptString = decryptArray.join(' ')
+
+
+    if (input.value === decryptString) {
+      appHandler.removeDivClass
+      return alert('Nenhuma mensagem criptografada encontrada')
+    }
+    if(!input.value) {
+      appHandler.removeDivClass()
+      return alert('Insira um texto para descriptografar')
+    }
+    if(!output.innerHTML) {
+      appHandler.toggleDivClass()
+    }
+    
+    
+    return output.innerHTML = decryptString
   }
 }
